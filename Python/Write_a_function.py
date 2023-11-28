@@ -16,32 +16,16 @@ Note that the code stub provided reads from STDIN and passes arguments to the is
 '''
 
 def is_leap(year):
+    
+    # variable to check the leap year
     leap = False
     
-    # Write your logic here
-    
-    def is_leap(leap):
-    
-        # variable to check the leap year
-        leap = False
+    # One if statement that contains multiple conditions
+    if ((year % 400 == 0) and (year % 100 == 0)) | ((year % 4 ==0) and (year % 100 != 0)):
         
-        # divided by 100 means century year
-        # century year divided by 400 is leap year
-        if (year % 400 == 0) and (year % 100 == 0):
-            
-        # change leap to True
-            leap = True
+       # change leap to True
+        leap = True
 
-        # not divided by 100 means not a century year
-        # year divided by 4 is a leap year
-        elif (year % 4 ==0) and (year % 100 != 0):
-            
-            #Change leap to true
-            leap = True
-
-        #else not a leap year
-        else:      
-            pass
     
     return leap
 

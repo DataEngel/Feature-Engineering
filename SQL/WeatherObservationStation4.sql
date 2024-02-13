@@ -6,4 +6,8 @@
     3. Type your code immediately after comment. Don't leave any blank line.
 */
 
-select count(CITY)- count(distinct CITY) from STATION; 
+SELECT 
+    (SELECT COUNT(*) FROM STATION) AS TotalEntries,
+    (SELECT COUNT(DISTINCT CITY) FROM STATION) AS DistinctEntries,
+    (SELECT COUNT(*) - COUNT(DISTINCT CITY) FROM STATION) AS Difference;
+

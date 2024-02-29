@@ -6,9 +6,4 @@
     3. Type your code immediately after comment. Don't leave any blank line.
 */
 
-SELECT 
-    COUNT(*) AS total_entries,
-    COUNT(DISTINCT LAT_N || ',' || LONG_W) AS distinct_entries,
-    COUNT(*) - COUNT(DISTINCT LAT_N || ',' || LONG_W) AS difference
-FROM 
-    STATION;
+SELECT COUNT(CITY) - COUNT(DISTINCT CITY) FROM STATION; 

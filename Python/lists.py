@@ -61,3 +61,16 @@ if __name__ == '__main__':
         else:
 
             List.reverse();
+
+'''
+Steps Used in solving the problem -
+Step 1: First, n will take input for the total command lines.
+
+Step 2: then, we created a list to store the elements.
+
+Step 3: After this, we created a for loop.
+
+Step 4: inside for loop, we have taken an input of the command.
+
+Step 5: then we used if and elif conditions to identify the command. After, the command gets identified an appropriate operation is performed.
+'''

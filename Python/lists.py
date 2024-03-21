@@ -24,33 +24,40 @@ print
 Output:
 '''
 
-import sys
-
 if __name__ == '__main__':
+
     N = int(input())
 
-my_list = []
-inputs  = []
+    List=[];
 
-for line in sys.stdin:
-    inputs.append(line)
+    for i in range(N):
 
-for item in inputs:
-    if item[0:5] == 'print':
-        print(my_list)
-    elif item[0:2] == 'in':
-        inserts = [s for s in item.split()][1:3]
-        inserts = list(map(int, inserts))
-        my_list.insert(inserts[0], inserts[1])
-    elif item[0:3] == 'rem':
-        inserts = list(map(int, [s for s in item.split()][1]))
-        my_list.remove(inserts[0])
-    elif item[0:2] == 'ap':
-        inserts = list(map(int, [s for s in item.split()][1]))
-        my_list.append(inserts[0])
-    elif item[0:4] == 'sort':
-        my_list.sort()
-    elif item[0:3] == 'pop':
-        my_list.pop()
-    elif item[0:7] == 'reverse':
-        my_list.reverse()
+        command=input().split();
+
+        if command[0] == "insert":
+
+            List.insert(int(command[1]),int(command[2]))
+
+        elif command[0] == "append":
+
+            List.append(int(command[1]))
+
+        elif command[0] == "pop":
+
+            List.pop();
+
+        elif command[0] == "print":
+
+            print(List)
+
+        elif command[0] == "remove":
+
+            List.remove(int(command[1]))
+
+        elif command[0] == "sort":
+
+            List.sort();
+
+        else:
+
+            List.reverse();
